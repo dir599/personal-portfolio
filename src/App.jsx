@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import pp from "./assets/pp.jpeg"
+import projectVideo from "./assets/projectvid1.mp4";
+import pp from "./assets/pp.jpeg";
 import { motion } from "framer-motion";
 import {
   Clock,
@@ -88,14 +89,54 @@ const App = () => {
             className="card card-cyan md:col-span-1 
             row-span-3 flex flex-col justify-center gap-3"
           >
-            <img src={pp} alt="photo" className="w-[70px] h-[70px]
-            rounded-full object-cover" />
+            <img
+              src={pp}
+              alt="photo"
+              className="w-[70px] h-[70px]
+            rounded-full object-cover"
+            />
             <h2>
-              <User size={22} className="text-violet-400"/>
+              <User size={22} className="text-violet-400" />
               <p>{personalInfo.name}</p>
             </h2>
 
-            {/* project card */}
+            <p className="text-slate-300 text-sm leading-relaxed">
+              {personalInfo.bio}
+            </p>
+          </motion.div>
+          {/* project card */}
+          <motion.div
+            variants={itemVariants}
+            className="card card-violet md:col-span-1 row-span-4 flex flex-col gap-4"
+          >
+            <h2 className="section-title">
+              <Trophy size={20} className="text-violet-400" />
+              <span>Projects</span>
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent">
+              {projects.map((i) => (
+                <motion.div
+                  key={i}
+                  className="releative group rounded-xl overflow-hidden w-full aspect-video cursor-pointer"
+                >
+                  <video
+                    src={projectVideo}
+                    muted
+                    loop
+                    autoPlay
+                    playsInline
+                    className="w-full h-full object-cover"
+                  ></video>
+
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <button className="gradient-btn">
+                      Open Project
+                      <ExternalLink size={14} />
+                    </button>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
         </motion.main>
       </div>
