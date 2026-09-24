@@ -1,11 +1,11 @@
 
 import { FaGithub, FaLinkedin, FaTwitter, FaYoutube } from "react-icons/fa";
 export const personalInfo = {
-  name: "James Wells",
+  name: "Dirag kasula",
   role: "Web Developer",
-  bio: "Hi, I’m James. I'm a Web Developer focused on building fast, elegant, and thoughtful digital experiences. My work blends technical precision with a design-driven mindset to create websites that not only work well but feel great.",
-  email: "jameswells@example.com",
-  location: "USA",
+  bio: "Hi, I’m Dirag. I'm a Web Developer focused on building fast, elegant, and thoughtful digital experiences. My work blends technical precision with a design-driven mindset to create websites that not only work well but feel great.",
+  email: "dirag4143@gmail.com",
+  location: "NEPAL",
 };
 
 export const projects = [1, 2, 3, 4, 5, 6];
