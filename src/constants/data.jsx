@@ -14,7 +14,7 @@ export const socialLinks = [
   {
     name: "GitHub",
     icon: FaGithub,
-    link: "#",
+    link: "https://github.com/dir599",
     color: "hover:text-white",
   },
   {
@@ -52,23 +52,14 @@ export const experiences = [
     desc: "Developed internal dashboards and small-scale SaaS tools with React and Node.js. Improved UI performance and introduced reusable component systems for faster development.",
     color: "cyan",
   },
-  {
-    title: "UI/UX Designer",
-    company: "Freelance",
-    period: "2019 — 2021",
-    desc: "Designed intuitive, minimal interfaces with a focus on motion and user experience. Helped startups and small businesses bring their brand and web presence to life.",
-    color: "pink",
-  },
 ];
 
 export const tools = [
-  "Figma – UI/UX Design",
-  "Adobe After Effects – Motion Design",
   "VS Code – Code Editor",
   "Git & GitHub – Version Control",
   "Postman – API Testing",
   "Docker – Containerization",
-  "Notion – Productivity",
+  "Claude – AI Coding Assistant"
 ];
 
 export const goals = [
@@ -82,36 +73,35 @@ export const achievements = [
   {
     title: "Projects Completed",
     value: "50+",
-    desc: "Developed 50+ interactive motion and web projects for enterprise clients.",
+    desc: "Developed 50+ interactive  web projects for learning purpose",
     color: "yellow",
   },
-  {
-    title: "Open Source Contributions",
-    value: "1.2k+",
-    desc: "Contributed to popular open-source projects, including motion and UI libraries.",
-    color: "cyan",
-  },
-  {
-    title: "Speaker Engagements",
-    value: "10+",
-    desc: "Presented at international conferences like Adobe MAX and UXDX.",
-    color: "pink",
-  },
-  {
-    title: "Awards & Recognition",
-    value: "5",
-    desc: "Won multiple awards for innovative motion design and interactive experiences.",
-    color: "violet",
-  },
+ {
+  title: "Open Source Contributions",
+  value: "Coming Soon",
+  desc: "Actively looking to contribute to open-source projects and UI libraries.",
+  color: "cyan",
+},
+{
+  title: "Presentations & Talks",
+  value: "6+", 
+  desc: "Presented on design and development topics at college/community events.",
+  color: "pink",
+},
+{
+  title: "Awards & Recognition",
+  value: "5+", 
+  desc: "Recognized for development work in college events.",
+  color: "violet",
+},
 ];
 
 export const skills = [
   {
     category: "Frontend",
     skills: [
-      "React / Next.js",
+      "React",
       "Tailwind CSS / CSS Animations",
-      "Framer Motion",
       "HTML / CSS / JS",
     ],
   },
@@ -121,7 +111,7 @@ export const skills = [
   },
   {
     category: "Design & Tools",
-    skills: ["Figma / Motion Design", "Docker / Git", "Notion / VS Code"],
+    skills: ["Motion Design", "Nodemon / Git", "VS Code"],
   },
   {
     category: "Other",
@@ -130,10 +120,10 @@ export const skills = [
 ];
 
 export const certificates = [
-  "Microsoft Certified: Power Platform App Maker",
-  "Adobe Certified Expert: After Effects",
-  "Frontend Developer Nanodegree - Udacity",
-  "Docker Essentials - Coursera",
+  "Red Hat Certified – Linux Basics",
+  "HTML & CSS – Certification",
+  "React.js – Certification",
+  "Node.js, Express & Prisma ORM – Certification",
 ];
 
 export const animatedBlobs = [

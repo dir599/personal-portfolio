@@ -10,6 +10,7 @@ import {
   BriefcaseBusiness,
   ExternalLink,
   Mail,
+  Group,
 } from "lucide-react";
 import {
   personalInfo,
@@ -95,7 +96,7 @@ const App = () => {
               className="w-[70px] h-[70px]
             rounded-full object-cover"
             />
-            <h2>
+            <h2 className="section-title">
               <User size={22} className="text-violet-400" />
               <p>{personalInfo.name}</p>
             </h2>
@@ -174,6 +175,193 @@ const App = () => {
                 Send Mail
               </a>
             </div>
+          </motion.div>
+
+          {/* social link */}
+          <motion.div
+            variants={itemVariants}
+            className="card card-violet md:col-span-1 row-span-3 flex flex-col justify-center gap-4  "
+          >
+            <h2 className="section-title">
+              <User size={20} className="text-violet-400" />
+              <span>Social Links</span>
+            </h2>
+            <ul className="space-y-3">
+              {socialLinks.map((social, i) => (
+                <motion.li
+                  key={i}
+                  whileHover={{ x: 4 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <a
+                    href={social.link}
+                    target="_blank"
+                    className={`group flex items-center text-slate-400 ${social.color}`}
+                  >
+                    <span className="p-2 rounded-lg bg-white/5 group-hover:bg-white/10 transition duration-300 group-hover:scale-110">
+                      <social.icon size={18} />
+                    </span>
+                    <span className="relative font-medium">
+                      {social.name}
+                      <span className="absolute left-0 -bottom-0 w-0 h-[2px] bg-gradient-to-r from-violet-500 to-cyan-300 transition-all duration-300 group-hover:w-full "></span>
+                    </span>
+                  </a>
+                </motion.li>
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* experience card */}
+
+          <motion.div
+            variants={itemVariants}
+            className="card card-cyan md:col-span-1 row-span-4 flex flex-col"
+          >
+            <h2 className="section-title">
+              <BriefcaseBusiness size={20} className="text-cyan-400 " />
+              <span>Experience</span>
+            </h2>
+            <ul className="space-y-3 px-3 text-sm overflow-y-auto overflow-x-hidden">
+              {experiences.map((job, i) => (
+                <li key={1} className="soft-card group">
+                  <span className="text-white font-medium flex items-center gap-2">
+                    {job.title} - {job.company}
+                  </span>
+                  <span className="text-xs text-slate-500 mt-1">
+                    {job.period}
+                  </span>
+                  <p className="mt-2 text-slate-400 leading-relaxed">
+                    {job.desc}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* favorite tools card */}
+          <motion.div
+            variants={itemVariants}
+            className="card card-green row-span-3 flex flex-col justify-center gap-3 group"
+          >
+            <h2 className="section-title">
+              <BriefcaseBusiness size={20} className="text-green-400" />
+              <span>Favorite Tools</span>
+            </h2>
+            <ul className="space-y-2 text-sm">
+              {tools.map((tool, i) => (
+                <motion.li
+                  key={i}
+                  whileHover={{ x: 4 }}
+                  className="flex items-center gap-2 group"
+                >
+                  <span className="bullet bg-green-400/50 group-hover:bg-green-400"></span>
+                  {tool}
+                </motion.li>
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* goal card  */}
+          <motion.div
+            variants={itemVariants}
+            className="card card-green row-span-2 flex flex-col justify-center group"
+          >
+            <h2 className="section-title">
+              <Trophy size={20} className="text-green-400" />
+              <span>Goals</span>
+            </h2>
+            <ul className="text-slate-400 text-sm space-y-2">
+              {goals.map((goal, i) => (
+                <li key={i} className="flex items-start gap-2">
+                  <span className="bullet mt-1 bg-green-400/50 group-hover:bg-green-400"></span>
+                  {goal}
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* achievements Card */}
+          <motion.div
+            variants={itemVariants}
+            className="card card-yellow row-span-3 sm:row-span-4 flex flex-col gap-4"
+          >
+            <h2 className="section-title">
+              <Trophy size={20} className="text-yellow-400" />
+              <span>Achievements & Metrics</span>
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-400">
+              {achievements.map((ach, i) => (
+                <motion.div
+                  key={i}
+                  whileHover={{ scale: 1.03 }}
+                  className="starts-box"
+                >
+                  <span
+                    className={`font-bold text-xl ${
+                      ach.color === "yellow"
+                        ? "text-yellow-400"
+                        : ach.color == "cyan"
+                          ? "text-cyan-400"
+                          : ach.color === "pink"
+                            ? "text-pink-400"
+                            : "text-violet-400"
+                    }`}
+                  >
+                    {ach.value}
+                  </span>
+                  <h3 className="mt-1 font-medium text-white/90">{ach.name}</h3>
+                  <p className="mt-1 text-slate-400 text-xs leading-snug">
+                    {ach.desc}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* skill card */}
+          <motion.div
+            variants={itemVariants}
+            className="card card-cyan row-span-5 flex flex-col overflow-hidden"
+          >
+            <h2 className="section-title">
+              <User size={20} className="text-cyan-400" />
+              <span>Skills</span>
+            </h2>
+            <ul className="space-y-4 text-sm text-slate-400 overflow-y-auto max-h-[450px]">
+              {skills.map((group, i) => (
+                <li key={i} className="space-y-3">
+                  <span className="font-medium text-white/90">
+                    {group.category}
+                  </span>
+                  <ul className="ml-4 space-y-1">
+                    {group.skills.map((skill, j) => (
+                      <li key={j} className="hover-item mt-1">
+                        {skill}
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* certificates */}
+          <motion.div
+            variants={itemVariants}
+            className="card card-orange row-span-2 flex flex-col gap-2 overflow-hidden group"
+          >
+            <h2 className="section-title">
+              <Trophy size={20} className="text-amber-400" />
+              <span>Certificates</span>
+            </h2>
+            <ul className="space-y-2 text-sm text-slate-400">
+              {certificates.map((cert, i) => (
+                <li key={i} className="flex items-center gap-2">
+                  <span className="bullet bg-amber-600/50 group-hover:bg-amber-400"></span>
+                  {cert}
+                </li>
+              ))}
+            </ul>
           </motion.div>
         </motion.main>
       </div>
