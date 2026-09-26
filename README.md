@@ -1,16 +1,228 @@
-# React + Vite
+Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A modern personal portfolio website built with React.js, Tailwind CSS, and Framer Motion. It showcases my profile, projects, experience, skills, tools, goals, achievements, certificates, and social links through a responsive dashboard-style interface.
 
-Currently, two official plugins are available:
+✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Responsive portfolio design
 
-## React Compiler
+Modern dark UI
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Framer Motion animations
 
-## Expanding the Oxlint configuration
+Animated background elements
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+Staggered entrance animations
+
+Hover and tap interactions
+
+Project video showcase
+
+Live local-time clock
+
+Profile and bio section
+
+Experience section
+
+Skills grouped by category
+
+Favorite tools section
+
+Goals section
+
+Achievements and metrics
+
+Certificates section
+
+Social media links
+
+Email contact button
+
+🛠️ Tech Stack
+
+React.js
+
+JavaScript
+
+Tailwind CSS
+
+Framer Motion
+
+Lucide React
+
+Vite
+
+Git & GitHub
+
+📁 Project Structure
+
+personalPortfolio/
+├── dist/
+├── node_modules/
+├── public/
+│
+├── src/
+│   ├── assets/
+│   │   ├── hero.png
+│   │   ├── pp.jpeg
+│   │   ├── projectvid1.mp4
+│   │   ├── react.svg
+│   │   └── vite.svg
+│   │
+│   ├── components/
+│   │
+│   ├── constants/
+│   │   └── data.jsx
+│   │
+│   ├── pages/
+│   │
+│   ├── App.css
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+│
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+└── README.md
+
+
+📌 Main Sections
+
+👤 Profile
+
+Contains my profile image, name, and personal bio.
+
+🏆 Projects
+
+Displays projects using video previews with interactive hover effects.
+
+🕐 Local Time
+
+Shows my local time and updates automatically every second.
+
+📧 Contact
+
+Provides an email button so visitors can contact me directly.
+
+🌐 Social Links
+
+Contains links to my social profiles with interactive hover animations.
+
+💼 Experience
+
+Displays my experience, including role, company, period, and description.
+
+🛠️ Favorite Tools
+
+Lists the development tools and technologies I use regularly.
+
+🎯 Goals
+
+Shows my current professional and learning goals.
+
+🏅 Achievements & Metrics
+
+Displays selected achievements and metrics using animated cards.
+
+💻 Skills
+
+Organizes my technical skills into different categories.
+
+📜 Certificates
+
+Displays my certificates and learning achievements.
+
+🎬 Framer Motion
+
+Framer Motion is used to create smooth interactions and animations throughout the portfolio.
+
+The portfolio includes:
+
+Staggered card animations
+
+Section entrance animations
+
+Animated background blobs
+
+Hover animations
+
+Tap animations
+
+Smooth transitions
+
+📦 Installation
+
+Clone the repository:
+
+git clone YOUR_GITHUB_REPOSITORY_URL
+
+Move into the project directory:
+
+cd personalPortfolio
+
+Install dependencies:
+
+npm install
+
+Start the development server:
+
+npm run dev
+
+🏗️ Production Build
+
+Create a production build:
+
+npm run build
+
+Preview the production build:
+
+npm run preview
+
+✏️ Customization
+
+Most portfolio information is stored in:
+
+src/constants/data.jsx
+
+You can update:
+
+Personal information
+
+Projects
+
+Social links
+
+Experience
+
+Tools
+
+Goals
+
+Achievements
+
+Skills
+
+Certificates
+
+This keeps the portfolio content separate from the UI code.
+
+🚀 Live Demo
+
+View Live Portfolio (https://personal-portfolio-dirag.vercel.app/)
+
+📬 Contact
+
+Email: dirag4143@gmail.com
+
+GitHub: github.com/dir599
+
+👨‍💻 Author
+
+Dirag kasula
+
+Built with React.js, Tailwind CSS, and Framer Motion.
+
+⭐ If you like this project, consider giving the repository a star.
